@@ -16,7 +16,7 @@ class User():
         print("Age", self.age)
         print("Gender", self.gender)
 
-# johan = User("Pika", 21, "Male")
+# johan = User("Pika", 21, "F")
 # johan.show_user_details()
 
 #Child Class: Bank
@@ -31,7 +31,7 @@ class Bank(User):
     def deposit(self,amount):
         self.amount = amount
         self.balance = self.balance + self.amount
-        print("New balnce: $", self.balance)
+        print("Amount after deposit: $", self.balance)
         
 
     def withdraw(self, amount):
@@ -39,7 +39,7 @@ class Bank(User):
             print("Failed. You do not have that much money on your account")
         else:
             self.balance = self.balance - amount
-            print("After withdraw, $:",self.balance)
+            print("Amount after withdraw, $:",self.balance)
     
     def view_balance(self):
         self.show_user_details()
